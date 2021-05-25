@@ -74,5 +74,18 @@ function StreamerActions() {
   );
 }
 
-export const ViewerDemo = demoHOC(ViewerActions);
-export const StreamerDemo = demoHOC(StreamerActions);
+function withBailOut(Com) {
+  return function BailoutOnUnmount() {
+    const manager = useLinkMicManager();
+    useEffect(() => {
+      return () => {
+        // 离开直播间的时候, 会调用，消除副作用。
+        manager.leaveRoomOnBailout()
+      }
+    }, [])
+    return <Com></Com>
+  }
+}
+
+export const ViewerDemo = withBailOut(demoHOC(ViewerActions));
+export const StreamerDemo = withBailOut(demoHOC(StreamerActions));
