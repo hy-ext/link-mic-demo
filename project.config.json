@@ -1,0 +1,60 @@
+{
+  "name": "LinkMicDemo",
+  "outputPath": "dist",
+  "releasePath": "release",
+  "extId": "jgo9udrw",
+  "isTestEnv": true,
+  "ignore": [
+    "*.md",
+    "LICENSE",
+    ".git/**",
+    ".gitignore",
+    "package-lock.json"
+  ],
+  "builder": {
+    "name": "@hyext/builder-beyond",
+    "config": {
+      "hostId": "huyaext",
+      "webSDKVersion": "test",
+      "webTitle": "虎牙小程序",
+      "designWidth": 750,
+      "buildConfig": {
+        "RN": [
+          {
+            "extType": "app_panel",
+            "platform": "app",
+            "entry": "index.js"
+          },
+          {
+            "extType": "zs_anchor_panel",
+            "platform": "app",
+            "entry": "index_streamer.js"
+          }
+        ],
+        "H5": [
+          {
+            "extType": "web_video_com",
+            "platform": "web",
+            "entry": "index.js"
+          },
+          {
+            "extType": "pc_anchor_panel",
+            "platform": "pc",
+            "entry": "index_streamer.js"
+          }
+        ]
+      },
+      "useTaf": false,
+      "https": true,
+      "host": "172.21.108.22",
+      "useCssLoader": true,
+      "port": 18080,
+      "enableLint": {
+        "stylelint": false,
+        "eslint": false
+      },
+      "enableVW": false,
+      "compileNodeModules": []
+    }
+  }
+}

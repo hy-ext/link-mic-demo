@@ -1,0 +1,14 @@
+.container {
+  flex: 1;
+  background: #fff;
+}
+
+.input {
+  border: 1px solid #f00;
+  padding: 10px;
+  margin: 20px 40px;
+}
+
+.label {
+  margin: 0 40px;
+}

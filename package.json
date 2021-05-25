@@ -1,0 +1,25 @@
+{
+  "name": "LinkMicDemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx hyext start",
+    "release": "npx hyext release",
+    "config": "npx hyext config"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@hyext/builder-beyond": "^2.0.10"
+  },
+  "dependencies": {
+    "@hyext-beyond/core": "2.0.4",
+    "@hyext/ext-sdk-hy": "2.8.0-beta.6",
+    "@hyext/hy-ui": "1.3.14",
+    "@hyext/link-mic": "1.0.0",
+    "@hyext/utils": "^1.0.4",
+    "md5": "^2.3.0"
+  }
+}
